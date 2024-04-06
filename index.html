@@ -161,10 +161,6 @@
       liff.ready.then(() => {
         console.log('LIFF Working !')
       })
-      liff.getProfile()
-        .then((profile) => {
-         imgUser = profile.pictureUrl;
-          })
     })
 
     function submit() {
@@ -172,7 +168,7 @@
       let data = {
         opt: 'savedata',
         uid: liff.getDecodedIDToken().sub,
-        imgUser: imgUser,
+        imgUser: liff.getDecodedIDToken().picture,
         name: $('#name').val(),
         phone: $('#phone').val(),
         device: $('#device').val(),
