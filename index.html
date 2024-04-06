@@ -152,7 +152,6 @@
   <script>
     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyhmcXsD0KOxE0s1pk-3d8gvbFRnrtfr2e3PsWNhVqEhbvroFvuy2lPRpDMPN4Wuk2u/exec'
     var uid
-    var imguser
     $(document).ready(() => {
       liff.init({
         liffId: '2004508413-Zp0qWaBO',
@@ -168,7 +167,6 @@
       let data = {
         opt: 'savedata',
         uid: liff.getDecodedIDToken().sub,
-        imguser: liff.getDecodedIDToken().picture,
         name: $('#name').val(),
         phone: $('#phone').val(),
         device: $('#device').val(),
