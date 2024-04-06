@@ -159,11 +159,12 @@
         withLoginOnExternalBrowser: true
       })
       liff.ready.then(() => {
-        liff.getProfile()
+        console.log(''LIFF Working !)
+      })
+      liff.getProfile()
         .then((profile) => {
          imgUser = profile.pictureUrl;
           })
-      })
     })
 
     function submit() {
